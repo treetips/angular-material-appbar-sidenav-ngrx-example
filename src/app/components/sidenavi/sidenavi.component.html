@@ -1,0 +1,23 @@
+<mat-list class="sidenav-menu">
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-list-item (click)="handleClickMenu($event)">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>home</h4>
+    </mat-list-item>
+  </a>
+
+  <a routerLink="/dog" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-list-item (click)="handleClickMenu($event)">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>dog</h4>
+    </mat-list-item>
+  </a>
+
+  <a routerLink="/cat" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <mat-list-item (click)="handleClickMenu($event)">
+      <mat-icon mat-list-icon>folder</mat-icon>
+      <h4 mat-line>cat</h4>
+    </mat-list-item>
+  </a>
+
+</mat-list>

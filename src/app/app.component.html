@@ -1,0 +1,23 @@
+<app-appbar></app-appbar>
+
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="{{sidenaviMode$ | async}}" opened="{{sidenaviOpened$ | async}}">
+    <app-sidenavi></app-sidenavi>
+  </mat-sidenav>
+
+  <div class="main-container">
+    <router-outlet (activate)="activateRouterOutlet($event)"></router-outlet>
+  </div>
+
+</mat-sidenav-container>
+
+<footer>
+  <ul class="flex">
+      <li><a href="https://github.com/treetips/angular-material-sidenav-example" target="_blank">Github</a></li>
+      <li><a href="https://hub.docker.com/u/treetips/" target="_blank">Docker hub</a></li>
+      <li><a href="https://www.string-utility.com/" target="_blank">Angular SPA site</a></li>
+      <li><a href="https://www.tree-maps.com/" target="_blank">React SPA site</a></li>
+      <li><a href="http://www.bunkei-programmer.net/" target="_blank">blog</a></li>
+  </ul>
+</footer>

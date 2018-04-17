@@ -1,0 +1,23 @@
+<header>
+  <mat-toolbar class="app-toolbar mat-elevation-z6">
+
+    <!-- row1: left -->
+    <ng-container *ngIf="sidenaviMode$ | async as mode">
+      <span *ngIf="mode === 'over'; else modeElse">
+        <mat-icon class="cursor-pointer" (click)="toggleSidenav()">menu</mat-icon>&nbsp;
+      </span>
+      <ng-template #modeElse>
+        <span>Example !!</span>
+      </ng-template>
+    </ng-container>
+
+    <!-- row2: center -->
+    <span>{{appbarTitle$ | async}}</span>
+
+    <!-- row3: right -->
+    <span>
+      <mat-icon mat-list-icon>more_vert</mat-icon>
+    </span>
+
+  </mat-toolbar>
+</header>
